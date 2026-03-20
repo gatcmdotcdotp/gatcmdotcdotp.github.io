@@ -27,12 +27,14 @@
 
     .profile {
       width: 90px;
-      height: 90px;
+      height: 90px; /* garante fallback */
+      aspect-ratio: 1 / 1;
       border-radius: 50%;
       background-image: url('https://www.carlosmendes.com.pt/no-robots/carlosmendes.png');
       background-size: cover;
       background-position: center;
       border: 3px solid #8db81f;
+      flex-shrink: 0;
     }
 
     .container {
@@ -97,6 +99,29 @@
       opacity: 0.15;
       font-size: 70px;
     }
+
+    .contact {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+    
+    .contact a {
+      color: #8db81f;
+      text-decoration: none;
+    }
+    
+    .form-section {
+      margin-top: 50px;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      background: white;
+    }
+    
   </style>
 </head>
 <body>
@@ -125,12 +150,19 @@
       Agendar reunião
     </a>
   </div>
-
   <div class="qr">
     <p>Ou utilize o QR Code:</p>
     <img src="https://www.carlosmendes.com.pt/no-robots/buk-qrcode.png" alt="QR Code">
   </div>
 
+  <div class="contact">
+    Contacto: <a href="mailto:geral@carlosmendes.com.pt">geral@carlosmendes.com.pt</a>
+  </div>
+<div class="form-section">
+  <p>Ou deixe o seu contacto:</p>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwH9PwJXTumiC9yf13cciWLTITQu-BmNSPtfexw8zC1d1wbQ/viewform?embedded=true" width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe>
+</div>
+  
 </div>
 
 <div class="birds">V V V</div>
